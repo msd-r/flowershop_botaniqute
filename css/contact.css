@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+  font-family: 'Crimson Text', serif, 'Raleway', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/**************************************************
+  header部分
+***************************************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 10;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#navi,
+.nav-menu,
+.nav-sns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-title img {
+  width: 200px;
+  padding-top: 5px;
+}
+
+li {
+  padding: 20px;
+}
+
+/**************************************************
+  main-visual部分
+***************************************************/
+.mainimage {
+  background-image: url("../images/contact.jpg");
+  background-position: top;
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.mainvisual-text {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  min-width: 300px;
+  padding: 30px;
+  font-size: 30px;
+}
+
+/**************************************************
+  問い合わせ部分
+***************************************************/
+.heading {
+  text-align: center;
+  padding: 15px;
+  font-size: 30px;
+}
+
+.title {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.contact-contents {
+  border: 1px solid gray;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.contact-flex {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.contact-contents li {
+  border-bottom: 1px solid gray;
+}
+
+.contact-contents li:first-child {
+  background: #F7F7F7;
+}
+
+.contact-contents li:nth-child(2) {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contact-contents li:last-of-type {
+  border-bottom: none;
+}
+
+
+/**************************************************
+  table部分
+***************************************************/
+.contact {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.contact-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-text {
+  margin-bottom: 20px;
+}
+
+.contact-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-item,
+.contact-body {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.contact-item {
+  text-align: left;
+  width: 30%;
+  background-color: #eee;
+}
+
+.contact-item span {
+  background-color: green;
+  color: #fff;
+  padding: 0 15px;
+}
+
+.contact-body {
+  width: 70%;
+}
+
+input[type="checkbox"] {
+  padding-right: 15px;
+}
+
+
+.form-text {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  max-width: 400px;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/******************************************
+  footer部分
+******************************************/
+/*トップページに戻る*/
+#to-top{
+  width: 50px;
+  height: 50px;
+  background-color: #121212;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+
+#to-top::after{
+  content: "";
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: relative;
+  left: 0;
+  bottom: 3px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 3%;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer .navi {
+  display: flex;
+  justify-content: center;
+}
+
+footer .navi li {
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
+
+footer p {
+  text-align: center;
+  padding: 20px;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media (max-width: 960px) {
+
+  .wrapper {
+    padding: 60px 20px;
+  }
+
+  .site-title {
+    width: 180px;
+    margin-bottom: 0;
+    position: relative;
+    left: 18px;
+    top: 10px;
+  }
+
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  header {
+    justify-content: left;
+    width: 100%;
+    height: 72px;
+    padding: 0;
+    z-index: 10;
+  }
+
+  #navi,
+  .nav-menu,
+  .nav-sns {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /*ハンバーガーメニュー*/
+  #navi {
+    width: 300px;
+    background: #fff;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    opacity: 0;
+    overflow-y: auto;
+    transition: 0.5s;
+    z-index: 20;
+  }
+
+  .open #navi {
+    left: 0;
+    opacity: 1;
+  }
+
+  #navi ul.nav-menu {
+    margin-bottom: 30px;
+  }
+
+  #navi ul li {
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 22px;
+    right: 18px;
+    transition: 0.5s;
+    z-index: 20;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 2px;
+    background-color: #121212;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 4px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 14px;
+  }
+
+  .hamburger span:nth-child(3) {
+    bottom: 4px;
+  }
+
+  .open .hamburger span {
+    background-color: #fff;
+  }
+
+  .open .hamburger span:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+
+  .open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .open .hamburger span:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+  }
+
+  #mask {
+    display: none;
+    transition: 0.5s;
+  }
+
+  .open #mask {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    cursor: pointer;
+    display: block;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  /*メインビジュアル部分*/
+  .mainvisual-text {
+    top: 60%;
+  }
+
+  /*contact部分*/
+  .contact-text {
+    margin-top: 20px;
+  }
+
+  /*footer部分*/
+  footer .navi {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .contact-contents {
+    margin: 10px auto;
+  }
+
+
+  .contact-flex {
+    grid-template-columns: 1fr;
+
+  }
+
+}
